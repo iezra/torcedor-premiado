@@ -12,7 +12,7 @@ export default function Splash() {
   return (
     <div className="fixed inset-0 z-[120] flex items-start justify-center overflow-y-auto bg-[rgba(32,30,29,.72)] px-4 py-[clamp(16px,4vw,48px)] backdrop-blur-[6px]">
       <div
-        className="w-full max-w-[760px] overflow-hidden rounded-3xl bg-bg shadow-lg"
+        className="w-full max-w-[1020px] overflow-hidden rounded-3xl bg-bg shadow-lg"
         style={{ animation: "fadeUp .4s cubic-bezier(.2,.7,.2,1) both" }}
       >
         {/* Header */}
@@ -34,22 +34,22 @@ export default function Splash() {
 
         {/* Team grid */}
         <div className="max-h-[52vh] overflow-y-auto p-[clamp(18px,3vw,26px)]">
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-3">
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-3">
             {teams.map((team) => (
               <button
                 key={team.abbr}
                 onClick={() => !team.soon && choose(team.name)}
                 disabled={team.soon}
-                className={`relative flex cursor-pointer flex-col items-center gap-3 rounded-2xl border border-neutral-200 bg-neutral-100 px-3 py-5 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-md ${
+                className={`relative flex cursor-pointer flex-col items-center gap-3 rounded-2xl border border-neutral-200 bg-neutral-100 px-3 py-6 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-md ${
                   team.soon ? "cursor-default opacity-60" : ""
                 }`}
               >
                 <Image
                   src={team.crest}
                   alt={team.name}
-                  width={80}
-                  height={80}
-                  className="h-20 w-20 object-contain"
+                  width={96}
+                  height={96}
+                  className="h-24 w-24 object-contain"
                 />
                 <span className="text-[11.5px] font-semibold leading-[1.2]">
                   {team.name}
