@@ -34,22 +34,22 @@ export default function Splash() {
 
         {/* Team grid */}
         <div className="max-h-[52vh] overflow-y-auto p-[clamp(18px,3vw,26px)]">
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(104px,1fr))] gap-[10px]">
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-3">
             {teams.map((team) => (
               <button
                 key={team.abbr}
                 onClick={() => !team.soon && choose(team.name)}
                 disabled={team.soon}
-                className={`relative flex cursor-pointer flex-col items-center gap-[9px] rounded-[14px] border border-neutral-200 bg-neutral-100 px-[10px] py-3.5 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-md ${
+                className={`relative flex cursor-pointer flex-col items-center gap-3 rounded-2xl border border-neutral-200 bg-neutral-100 px-3 py-5 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-md ${
                   team.soon ? "cursor-default opacity-60" : ""
                 }`}
               >
                 <Image
                   src={team.crest}
                   alt={team.name}
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 rounded-full object-contain"
+                  width={80}
+                  height={80}
+                  className="h-20 w-20 object-contain"
                 />
                 <span className="text-[11.5px] font-semibold leading-[1.2]">
                   {team.name}

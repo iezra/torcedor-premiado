@@ -29,9 +29,9 @@ export default function Nav() {
             <Image
               src={crestPath}
               alt={selected}
-              width={28}
-              height={28}
-              className="ml-0.5 h-7 w-7 rounded-full object-contain"
+              width={36}
+              height={36}
+              className="ml-0.5 h-9 w-9 rounded-full object-contain"
             />
           )}
         </div>

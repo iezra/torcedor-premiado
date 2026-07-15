@@ -35,7 +35,7 @@ export default function TeamSelector() {
         </p>
       </div>
 
-      <div className="mx-auto grid max-w-[820px] grid-cols-[repeat(auto-fill,minmax(130px,1fr))] gap-3">
+      <div className="mx-auto grid max-w-[960px] grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-3">
         {teams.map((team) => {
           const isSelected = selected === team.name;
           return (
@@ -43,7 +43,7 @@ export default function TeamSelector() {
               key={team.abbr}
               onClick={() => !team.soon && choose(team.name)}
               disabled={team.soon}
-              className={`relative flex cursor-pointer flex-col items-center gap-[10px] rounded-2xl border px-3.5 py-[18px] text-center transition-all duration-200 ${
+              className={`relative flex cursor-pointer flex-col items-center gap-3 rounded-2xl border px-3 py-5 text-center transition-all duration-200 ${
                 isSelected
                   ? "border-accent bg-accent-100 shadow-md"
                   : "border-neutral-200 bg-neutral-100 hover:-translate-y-0.5 hover:border-accent hover:shadow-md"
@@ -52,9 +52,9 @@ export default function TeamSelector() {
               <Image
                 src={team.crest}
                 alt={team.name}
-                width={44}
-                height={44}
-                className="h-11 w-11 rounded-full object-contain"
+                width={80}
+                height={80}
+                className="h-20 w-20 object-contain"
               />
               <span className="text-[12.5px] font-semibold leading-[1.2]">
                 {team.name}
